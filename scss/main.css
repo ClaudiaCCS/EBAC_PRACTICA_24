@@ -888,6 +888,7 @@ footer .footer__barra p {
 @media (min-width: 760px) {
   .modal__contenedor .modal__detalle {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
 }

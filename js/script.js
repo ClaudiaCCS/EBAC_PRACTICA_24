@@ -305,11 +305,11 @@ function mostrarDetalles(e) {
     titulo.classList.add('modal__titulo');
     titulo.innerHTML = `
         <div class = "modal__titulo--guia">
-            <img src = "../img/icono_paquete.png" class = "modal__icono"/>
+            <img src = "img/icono_paquete.png" class = "modal__icono"/>
             <h2>Detalle de la guía</h2>
         </div>
         <div class = "modal__titulo--cerrar">
-            <img src = "../img/icono_cerrar.png" class = "modal__icono modal__cerrar"/>
+            <img src = "img/icono_cerrar.png" class = "modal__icono modal__cerrar"/>
         </div>
     `;
     
@@ -318,26 +318,26 @@ function mostrarDetalles(e) {
     detalle.innerHTML = `
         <div class = "modal__detalle--guia">
             <div class = "modal__detalle--campo">
-                <img src = "../img/icono_guia.png" class = "modal__icono"/>
+                <img src = "img/icono_guia.png" class = "modal__icono"/>
                 <p>Guía:  <span>${listaGuias[indice].guia}</span><p>
             </div>
             <div class = "modal__detalle--campo">
-                <img src = "../img/icono_localizacion.png" class = "modal__icono"/>
+                <img src = "img/icono_localizacion.png" class = "modal__icono"/>
                 <p>Origen:  <span>${listaGuias[indice].origen}</span><p>
             </div>
             <div class = "modal__detalle--campo">
-                <img src = "../img/icono_destinatario.png" class = "modal__icono"/>
+                <img src = "img/icono_destinatario.png" class = "modal__icono"/>
                 <p>Destinatario:  <span>${listaGuias[indice].destinatario}</span><p>
             </div>
         </div>
         <div class = "modal__detalle--status">
             <div class = "modal__detalle--campo">
-                <img src = "../img/icono_localizacion.png" class = "modal__icono"/>
+                <img src = "img/icono_localizacion.png" class = "modal__icono"/>
                 <p>Destino:  <span>${listaGuias[indice].destino}</span><p>
             </div>
             <div class = "modal__detalle--campostatus">
                 <p>Status actual:</p>
-                <img src = "../img/${img_status}.png" class = "modal__icono"/>
+                <img src = "img/${img_status}.png" class = "modal__icono"/>
                 <p>${status_guia}<p>
             </div>
         </div>
@@ -350,7 +350,7 @@ function mostrarDetalles(e) {
     const titulo_estados = document.createElement('DIV');
     titulo_estados.classList.add('modal__estados--titulo');
     titulo_estados.innerHTML = `
-        <img src = "../img/icono_historial.png" class = "modal__icono"/>
+        <img src = "img/icono_historial.png" class = "modal__icono"/>
         <p>Historial de guía</p>
     `;
 
@@ -460,11 +460,11 @@ function cambiarStatus(e) {
     titulo.classList.add('modal__titulo');
     titulo.innerHTML = `
         <div class = "modal__titulo--guia">
-            <img src = "../img/icono_paquete.png" class = "modal__icono"/>
+            <img src = "img/icono_paquete.png" class = "modal__icono"/>
             <h2>Detalle de la guía</h2>
         </div>
         <div class = "modal__titulo--cerrar">
-            <img src = "../img/icono_cerrar.png" class = "modal__icono modal__cerrar"/>
+            <img src = "img/icono_cerrar.png" class = "modal__icono modal__cerrar"/>
         </div>
     `;
 
@@ -473,26 +473,26 @@ function cambiarStatus(e) {
     detalle.innerHTML = `
         <div class = "modal__detalle--guia">
             <div class = "modal__detalle--campo">
-                <img src = "../img/icono_guia.png" class = "modal__icono"/>
+                <img src = "img/icono_guia.png" class = "modal__icono"/>
                 <p>Guía:  <span>${listaGuias[indice].guia}</span><p>
             </div>
             <div class = "modal__detalle--campo">
-                <img src = "../img/icono_localizacion.png" class = "modal__icono"/>
+                <img src = "img/icono_localizacion.png" class = "modal__icono"/>
                 <p>Origen:  <span>${listaGuias[indice].origen}</span><p>
             </div>
             <div class = "modal__detalle--campo">
-                <img src = "../img/icono_destinatario.png" class = "modal__icono"/>
+                <img src = "img/icono_destinatario.png" class = "modal__icono"/>
                 <p>Destinatario:  <span>${listaGuias[indice].destinatario}</span><p>
             </div>
         </div>
         <div class = "modal__detalle--status">
             <div class = "modal__detalle--campo">
-                <img src = "../img/icono_localizacion.png" class = "modal__icono"/>
+                <img src = "img/icono_localizacion.png" class = "modal__icono"/>
                 <p>Destino:  <span>${listaGuias[indice].destino}</span><p>
             </div>
             <div class = "modal__detalle--campostatus">
                 <p>Status actual:</p>
-                <img src = "../img/${img_status}.png" class = "modal__icono"/>
+                <img src = "img/${img_status}.png" class = "modal__icono"/>
                 <p>${status_guia}<p>
             </div>
         </div>
@@ -505,7 +505,7 @@ function cambiarStatus(e) {
     const titulo_cambio = document.createElement('DIV');
     titulo_cambio.classList.add('modal__cambio--titulo');
     titulo_cambio.innerHTML = `
-        <img src = "../img/icono_cambio.png" class = "modal__icono"/>
+        <img src = "img/icono_cambio.png" class = "modal__icono"/>
         <p>Nuevo Status</p>
     `;
 
