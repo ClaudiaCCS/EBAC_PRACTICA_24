@@ -1,0 +1,130 @@
+/** MIXINS **/
+
+@mixin boton($tipo_boton) {
+    font-family: $letra_principal;
+    color: $color_azul_oscuro;
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: $letra_tamano;
+    font-weight: 700;
+    border: none;
+    border-radius: 0.5rem;
+    align-items: center;
+
+    @if $tipo_boton == 1 {
+        background-color: $color_azul_claro;
+        box-shadow: 2px 3px 3px 2px $color_azul_oscuro;
+
+        &:hover {
+            background-color: $color_azul_oscuro;
+            color: $color_azul_claro;
+        }
+    } @else {
+        @if $tipo_boton == 2 {
+            background-color: $color_azul_oscuro;
+            color: $color_azul_claro;
+            box-shadow: 1px 2px 2px 1px $color_azul_claro;
+            padding: 0.5rem 1rem;
+            &:hover {
+                background-color: $color_azul_claro;
+                color: $color_azul_oscuro;
+            }
+        }
+    }
+    
+}
+
+/** MIXINS BREAKPOINTS **/
+
+@mixin pantalla_tablet {
+    @media (min-width: 760px) {
+        @content;
+    }
+}
+
+@mixin pantalla_telefono {
+    @media (min-width: 570px) {
+        @content;
+    }
+}
+
+@mixin pantalla_pc {
+    @media (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin columnas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+@mixin direccion_columnas {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+
+@mixin direccion_renglones {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+@mixin enlaces ($tipo) {
+    height: 100%;
+    display:flex;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    @if $tipo == 1 {
+        color:$color_blanco;
+
+        &:hover {
+            background-color: $color_azul_claro;
+            color: $color_azul_oscuro;
+        }
+    } @else {
+        @if $tipo == 2 {
+            background-color: $color_azul_claro;
+            color: $color_azul_oscuro;
+
+            &:hover {
+                background-color: $color_azul_oscuro;
+                color: $color_azul_claro;
+                a {
+                    color: $color_azul_claro;
+                }
+            }
+        } @else {
+            @if $tipo == 3 {
+                background-color: $color_azul_claro;
+                color: $color_azul_oscuro;
+                height: 3rem;
+                font-size: 1.2rem;
+                font-weight: 700;
+                border: none;
+                box-shadow: 5px 7px 7px 5px $color_azul_oscuro;
+                border-radius: 0.5rem;
+
+                &:hover {
+                    background-color: $color_azul_oscuro;
+                    color: $color_azul_claro;
+                }
+            }
+        }
+    }
+    
+
+}

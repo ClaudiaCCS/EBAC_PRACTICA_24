@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hound Express</title>
+    <link rel = "icon" href = "img/logo_pag.png" type = "image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" integrity="sha512-IJEbgDEF7OeKJRa0MY2PApnyJHRIsgzCveek4ec8VWQ+7KG3ZSKVNYa5xP/Gh0hVP0Mwb+gBsk+GwR3JQGhQNg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel = "stylesheet" href = "scss/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <!--Encabezado de la página-->
+    <header>
+        <div class="header__contenedor">
+            <div class = "header__contenedor--encabezado global__menus">
+                <a href="index.html">
+                    <div class="header__contenedor--logo">
+                        <img src = "img/logo.jpg">
+                    </div>
+                </a>
+                <div class = "header__contenedor--telefonos">
+                    <p><span>MX</span> +52(55) 4000 1920</p>
+                </div>
+                <div class = "header__contenedor--telefonos">
+                    <p><span>USA</span> +(95) 6568 3443</p>
+                </div> 
+                <div class = "header__contenedor--idioma">
+                    <select name = "idioma">
+                        <option value = "ES">Español</option>
+                        <option value = "EN">English</option>
+                    </select>
+                </div>
+            </div>
+            <div class ="header__contenedor--bnavegacion">
+                <nav class="header__contenedor--navegacion global__menus">
+                    <div class = "header__contenedor--enlace">
+                        <a href ="#">Inicio</a>
+                    </div>
+                    <div class = "header__contenedor--enlace">
+                        <a href ="#">Nosotros</a>
+                    </div>
+                    <div class = "header__contenedor--enlace">
+                        <a href ="#">Servicios</a>
+                    </div>
+                    <div class = "header__contenedor--enlace">
+                        <a href ="#">Preguntas</a>
+                    </div>
+                    <div class = "header__contenedor--enlace">
+                        <a href ="#">Noticias</a>
+                    </div>
+                    <div class = "header__contenedor--enlace">
+                        <a href ="#">Blog</a>
+                    </div>
+                    <div class = "header__contenedor--enlace">
+                        <a href ="#">Contacto</a>
+                    </div>
+                </nav>
+                <div class = "header__contenedor--rportal">
+                    <div class = "header__contenedor--rastreo">
+                        <a href ="#">
+                            <p><span>&#128269;</span> Rastrear paquete</p>
+                        </a>
+                    </div>
+                    <div class = "header__contenedor--portal">
+                        <a href = "#">
+                            <p>Portal Cliente</p>
+                        </a>
+                    </div>
+                </div>
+            </div>  
+            
+            <div class="header__contenedor--barra">          
+                    <p>Contamos con amplia experiencia e infraestructura internacional.</p>
+                    <a href="#">Contáctanos</a>              
+            </div>
+
+            <div class = "header__contenedor--bacciones">
+                <p>Acciones >></p>
+                <div class = "header__contenedor--acciones">
+                    <div class = "header__contenedor--enlace">
+                        <a href = "#registro">Registro Guías</a>
+                    </div>
+                    <div class = "header__contenedor--enlace">
+                        <a href = "#estado">Estado General</a>
+                    </div>
+                    <div class = "header__contenedor--enlace">
+                        <a href = "#listado">Lista Guías</a>
+                    </div>
+                    <div class = "header__contenedor--enlace">
+                        <a href = "#buscador">Busca Guías</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!--Contenido principal de la página -->
+    <main>
+        <section class="main__registro" id="registro">
+            <h2>Registro de guías</h2>
+            <div class = "main__registro--contenedor global__menus">
+                <div class = "main__registro--formulario">
+                    <form id = "main__formulario">
+                        <div class = "main__registro--campo">
+                            <label for = "num_guia" class = "main__registro--label">Número de Guía: </label>
+                            <input
+                                type = "text"
+                                class = "main__registro--input"
+                                id = "num_guia"
+                                name = "num_guia"
+                                placeholder = "Número de Guía"
+                            >
+                        </div>
+                        <div class = "main__registro--campo">
+                            <label for = "origen" class = "main__registro--label">Origen: </label>
+                            <input
+                                type = "text"
+                                class = "main__registro--input"
+                                id = "origen"
+                                name = "origen"
+                                placeholder = "Indicar el Origen"
+                            >
+                        </div>
+                        <div class = "main__registro--campo">
+                            <label for = "destino" class = "main__registro--label">Destino: </label>
+                            <input
+                                type = "text"
+                                class = "main__registro--input"
+                                id = "destino"
+                                name = "destino"
+                                placeholder = "Indicar el Destino"
+                            >
+                        </div>
+                        <div class = "main__registro--campo">
+                            <label for = "destinatario" class = "main__registro--label">Destinatario: </label>
+                            <input
+                                type = "text"
+                                class = "main__registro--input"
+                                id = "destinatario"
+                                name = "destinatario"
+                                placeholder = "Indicar el Destinatario"
+                            >
+                        </div>
+                        <div class = "main__registro--campo">
+                            <label for = "fecha_creacion" class = "main__registro--label">Fecha de Creación: </label>
+                            <input
+                                type = "date"
+                                class = "main__registro--input"
+                                id = "fecha_creacion"
+                                name = "fecha_creacion"
+                                placeholder = "Fecha de Creación"
+                            >
+                        </div>
+                        <div class="main__registro--campo">
+                            <label for="estado_inicial" class="main__registro--label">Estado Inicial:</label>
+                            <select name="estado_inicial" id = "estado_inicial" disabled>
+                                <option value = "0">-- Seleccione --</option>
+                                <option selected value = "1">Pendiente</option>
+                                <option value = "2">En Tránsito</option>
+                                <option value = "3">Entregado</option>
+                            </select>
+                        </div>
+                    
+                        <input type = "submit" class = "main__registro--submit" value = "Registrar Guía">
+
+                    </form>
+                </div>
+                <div class = "main__registro--img">
+                    <img src = "img/registro.png">
+                </div>
+            </div>
+        </section>
+        <section class = "main__estado" id = "estado">
+            <h2>Estado General</h2>
+            <div class = "main__estado--general global__menus">
+                <div class = "main__estado--grafica">
+                    <div class = "main__estado--lagrafica">
+                        <canvas id = "graficaGuias"></canvas>
+                    </div>
+                </div>
+                <div class = "main__estado--tguias global__menus">
+                    <div class = "main__estado--todasguias">
+                        <div class = "main__estado--guias">
+                            <div class = "main__estado--pendytran">
+                                <div class = "main__estado--contenedor">
+                                    <div class = "main__estado--img">
+                                        <img src = "img/icono_pendiente.png" class = "main__estado--icono"/>
+                                    </div>
+                                    <div class ="main__estado--texto">
+                                        <div class = "main__estado--contitulo">
+                                            <p class = "main__estado--titulo">PENDIENTES</p>
+                                        </div>
+                                        <div class = "main__estado--conttexto">
+                                            <p class = "main__estado--numero main__estado--pendientes">0</p>
+                                            <p class = "main__estado--porcentaje main__estado--porcpendiente">0%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class = "main__estado--contenedor">
+                                    <div class = "main__estado--img">
+                                        <img src = "img/icono_transito.png" class = "main__estado--icono"/>
+                                    </div>
+                                    <div class ="main__estado--texto">
+                                        <div class = "main__estado--contitulo">
+                                            <p class = "main__estado--titulo">EN TRÁNSITO</p>
+                                        </div>
+                                        <div class = "main__estado--conttexto">
+                                            <p class = "main__estado--numero main__estado--transito">0</p>
+                                            <p class = "main__estado--porcentaje main__estado--porctransito">0%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class = "main__estado--entrycanc">
+                                <div class = "main__estado--contenedor">
+                                    <div class = "main__estado--img">
+                                        <img src = "img/icono_entregada.png" class = "main__estado--icono"/>
+                                    </div>
+                                    <div class ="main__estado--texto">
+                                        <div class = "main__estado--contitulo">
+                                            <p class = "main__estado--titulo">ENTREGADAS</p>
+                                        </div>
+                                        <div class = "main__estado--conttexto">
+                                            <p class = "main__estado--numero main__estado--entregadas">0</p>
+                                            <p class = "main__estado--porcentaje main__estado--porcentregadas">0%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class = "main__estado--contenedor">
+                                    <div class = "main__estado--img">
+                                        <img src = "img/icono_cancelada.png" class = "main__estado--icono"/>
+                                    </div>
+                                    <div class ="main__estado--texto">
+                                        <div class = "main__estado--contitulo">
+                                            <p class = "main__estado--titulo">CANCELADAS</p>
+                                        </div>
+                                        <div class = "main__estado--conttexto">
+                                            <p class = "main__estado--numero main__estado--canceladas">0</p>
+                                            <p class = "main__estado--porcentaje main__estado--porccanceladas">0%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class = "main__estado--totales">
+                            <div class = "main__estado--contenedor">
+                                <div class = "main__estado--img">
+                                    <img src = "img/icono_de_paquete.png" class = "main__estado--icono"/>
+                                </div>
+                                <div class ="main__estado--texto">
+                                    <div class = "main__estado--contitulo">
+                                        <p class = "main__estado--titulo">TOTAL GUÍAS</p>
+                                    </div>
+                                    <div class = "main__estado--conttexto">
+                                        <p class = "main__estado--numero main__estado--totalguias">0</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        
+        <section class="main__lista" id = "listado">
+            <h2>Lista de Guías</h2>
+            <div class = "main__lista--contenedor">
+                
+                <table class = "main__lista--tabla">
+                    <thead>
+                        <tr>
+                            <th># Guía</th>
+                            <th>Estado actual</th>
+                            <th>Origen</th>
+                            <th>Destino</th>
+                            <th>Última actualización</th>
+                            <th>Actualizar estado</th>
+                            <th>Ver Historial</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <a href="#" class = "main__lista--bmas">Ver más</a>
+            </div>           
+        </section>
+        <section class= "main__buscar" id ="buscador">
+            <div class = "main__buscar--contenedor">
+                <h2>Buscador de Guías</h2>
+                <div>
+                    <label for = "buscar">Número de Guía: </label>
+                    <input
+                        type = "text"
+                        class = "main__buscar--input"
+                        id = "buscar"
+                        placeholder = "Indicar número de guía"
+                    >
+                    <a href="#" class = "main__buscar--boton">Buscar</a>
+                </div>
+                
+                <table class = "main__buscar--tabla">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Status</th>
+                            <th>Origen</th>
+                            <th>Destino</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <p class = "main__buscar--mensaje">Indica una guía para mostrar su historial.</p> 
+            </div>
+                      
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class = "footer__contenedor global__menus">
+            <div>
+                <div class = "footer__contenedor--logo">
+                    <img src = "img/logo_oscuro.jpg">
+                </div>
+                <div class = "footer__contenedor--redes global__menus">
+                    <img src = "img/facebook.png">
+                    <img src = "img/instagram.png">
+                    <img src = "img/linkedin.png">
+                </div>
+            </div>
+            <div class = "footer__contenedor--nav">
+                <p>Hound Express</p>
+                <nav class="footer__contenedor--navegacion">
+                    <a href ="#">Inicio</a>
+                    <a href ="#">Nosotros</a>
+                    <a href ="#">Servicios</a>
+                    <a href ="#">Preguntas</a>
+                    <a href ="#">Noticias</a>
+                    <a href ="#">Blog</a>
+                    <a href ="#">Contacto</a>
+                </nav>
+            </div>
+            <div class = "footer__contenedor--contacto">
+                <p>Contáctanos</p>
+                <div>
+                    <img src = "img/whatsapp.png">
+                    <p>Lunes a viernes de 09:00 a 18:00 hrs.</p>
+                </div>
+                <div class = "footer__contenedor--tel">
+                    <div>
+                        <p>MX</p>
+                        <p>&#128222; +52 55 4000 1920</p>
+                    </div>
+                    <div>
+                        <p>USA</p>
+                        <p>&#128222; +95 6568 3443</p>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class = "footer__barra global__menus">
+            <p>Copyright &copy; Hound Express. Todos los derechos reservados.</p>
+            <p>Política de Privacidad</p>
+        </div>
+
+    </footer>
+    <script src = "js/datos.js"></script>
+    <script src = "js/script.js"></script>
+</body>
+</html>

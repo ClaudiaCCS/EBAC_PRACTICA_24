@@ -1,0 +1,300 @@
+/** CSS DEL MAIN **/
+
+
+.main__registro--img {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+
+    img {
+        max-width: 95%;
+        box-shadow: 3px 4px 4px 3px $color_azul_oscuro;
+        border-radius: 0.5rem;
+    }
+
+    @include pantalla_tablet {
+        width: 43%;
+        padding-top: 0;
+    }
+}
+
+.main__estado--general {
+    background-color: $color_azul_claro;
+    gap: 3rem;
+
+    .main__estado--grafica {
+        width: 80%;
+        height: 80%;
+        @include pantalla_tablet {
+            width: 50%;
+        }
+
+    }
+
+    .main__estado--tguias {
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        box-sizing: border-box;
+        
+        @include pantalla_tablet {
+            width: 50%;
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+        }
+
+        .main__estado--todasguias {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+    }
+
+    .main__estado--guias {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        @include pantalla_tablet {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    .main__estado--totales {
+        .main__estado--texto {
+            display: flex;
+            flex-direction: row;
+            gap: 4rem;
+            align-items: center;
+        }
+    }
+
+    .main__estado--pendytran, .main__estado--entrycanc {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .main__estado--contenedor {
+        display:flex;
+        align-items:center;
+        gap: 1rem;
+        background-color: $color_blanco;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin: 0;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        
+        .main__estado--icono {
+            width: 4rem;
+            height: 4.5rem;
+        }
+
+        .main__estado--titulo {
+            font-weight: 700;
+            font-size: clamp(1.5rem, 5.2vw, 2rem);
+            white-space: nowrap;
+        }
+
+        .main__estado--conttexto {
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .main__estado--numero {
+                font-weight: 900;
+                font-size: clamp(2rem, 5.2vw, 3rem);
+            }
+
+            .main__estado--porcentaje {
+                font-weight: 900;
+                font-size: clamp(1.5rem, 5.2vw, 2rem);
+            }
+
+            .main__estado--porcpendiente {
+                color: $color_guia_pendiente;
+            }
+
+            .main__estado--porctransito {
+                color: $color_guia_transito;
+            }
+
+            .main__estado--porcentregadas {
+                color: $color_guia_entregada;
+            }
+
+            .main__estado--porccanceladas {
+                color: $color_guia_cancelada;
+            }
+
+        }
+
+    }
+}
+
+.main__lista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .main__lista--contenedor {
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        border-radius: 0.5rem;
+        width: 90%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .main__lista--tabla {
+            width: 90%;
+            border-spacing: 0;
+            margin: 0 auto;
+            padding: 3rem;
+
+            thead {
+                background-color:$color_azul_oscuro;
+                color: $color_blanco;
+                font-size: 1rem;
+
+                @include pantalla_tablet {
+                    font-size: 1.2rem;
+                }
+            }
+
+            td {
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                border-bottom: 1px solid $color_azul_oscuro;
+                font-size: 1rem;
+
+                a {
+                    font-size: 2rem;
+                }
+            }
+
+            th {
+                &:nth-child(3), &:nth-child(4), &:nth-child(5) {
+                    display: none;
+                }
+            }
+
+            td {
+                &:nth-child(3), &:nth-child(4), &:nth-child(5) {
+                    display: none;
+                }
+
+                &:nth-child(2) {
+                    font-size: 0.8rem;
+                }
+            }
+
+            @include pantalla_tablet {
+                th {
+                &:nth-child(3), &:nth-child(4), &:nth-child(5) {
+                    display: table-cell;
+                }
+                }
+
+                td {
+                    &:nth-child(3), &:nth-child(4), &:nth-child(5) {
+                        display: table-cell;
+                    }
+
+                    &:nth-child(2) {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+
+        .main__lista--bmas {
+            @include boton(2);
+            display: flex;
+            align-self: center;
+        }
+    }
+}
+
+.main__buscar {
+    display: flex;
+    justify-content: center;
+
+    .main__buscar--contenedor {
+        border: 3px solid $color_azul_claro;
+        border-radius: 0.5rem;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        width: 93%;
+        padding-bottom: 2rem;
+
+        h2 {
+            padding-bottom: 0;
+        }
+
+        .main__buscar--input {
+            padding: 0.5rem;
+            border: 0.5px solid lighten($color_azul_oscuro, 20);
+            border-radius: .5rem;
+        }
+
+        .main__buscar--boton {
+            @include boton(1);
+            padding: 0.5rem 1rem;
+            margin-left: 2rem;
+        }
+
+        .main__buscar--tabla {
+            width: 90%;
+            border-spacing: 0;
+
+            thead {
+                background-color:$color_azul_oscuro;
+                color: $color_blanco;
+                font-size: 1rem;
+
+                @include pantalla_tablet {
+                    font-size: 1.2rem;
+                }
+            }
+
+            tbody {
+                text-align: center;
+                font-size: 1rem;
+                
+                td {
+                    border: 1px solid $color_gris_claro;
+                }
+            }
+
+            th {
+                &:nth-child(4) {
+                    display: none;
+                }
+            }
+
+            @include pantalla_tablet {
+                th {
+                &:nth-child(4) {
+                    display: table-cell;
+                }
+            }
+            }
+
+
+        }
+    }
+}

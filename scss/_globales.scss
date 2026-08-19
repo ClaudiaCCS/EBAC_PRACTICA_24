@@ -1,0 +1,33 @@
+/** CSS GLOBALES **/
+
+body {
+    font-family: $letra_principal;
+    font-size: $letra_tamano;
+    line-height: $interlineado;
+    background-color: $color_fondo;
+}
+
+main {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: $color_azul_oscuro;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 1.3rem;
+}
+
+
+.global__menus {
+    @include pantalla_tablet {
+        @include columnas;
+    }
+}

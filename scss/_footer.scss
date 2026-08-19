@@ -1,0 +1,90 @@
+/** CSS DEL FOOTER **/
+
+footer {
+    width: 100%;
+
+    .footer__barra {
+        background-color: $color_azul_claro;
+        color: $color_azul_oscuro;
+        font-size: 1.2rem;
+
+        p { 
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+    }
+}
+
+.footer__contenedor {
+    background-color: $color_azul_oscuro;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    padding-bottom: 2rem;
+
+    @include pantalla_tablet {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .footer__contenedor--logo img {
+        height: 8rem;
+    }
+
+    .footer__contenedor--redes {
+        padding-left: 2rem;
+        padding-right: 2rem;
+
+        img {
+            height: 2rem;
+        }
+    }
+
+    .footer__contenedor--nav {
+
+        p {
+            color:$color_azul_claro;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .footer__contenedor--navegacion {
+            gap: 1rem;
+            height: 100%;
+            align-items: center;
+
+            a {
+                height: 100%;
+                display:flex;
+                align-items: center;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                color:$color_blanco;
+
+                &:hover {
+                    background-color: $color_azul_claro;
+                    color: $color_azul_oscuro;
+                }
+            }
+        }
+    }
+
+    .footer__contenedor--contacto {
+        padding-right: 3rem;
+        padding-left: 3rem;
+        line-height: 1.5rem;
+        font-size: 1.2rem;
+        color:$color_blanco;
+
+        img {
+            height: 3rem;
+        }
+
+        .footer__contenedor--tel {
+            padding-top: 2rem;
+        }
+
+    }
+}
