@@ -1,0 +1,175 @@
+
+
+/* CONTENEDOR GENERAL */
+
+.main__registro--contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* TARJETA DEL FORMULARIO */
+
+.main__registro--formulario {
+  width: 100%;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  box-shadow:
+    rgba(50, 50, 93, 0.15) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.2) 0px 18px 36px -18px;
+}
+
+#main__formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.main__registro--campo {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.main__registro--campo label {
+  font-size: 1.8rem;
+  color: #000000;
+}
+
+.main__registro--campo input,
+.main__registro--campo select {
+  width: 100%;
+  min-height: 3.8rem;
+  padding: 0.7rem 1rem;
+  font-size: 1.4rem;
+  border: 1px solid #23416a;
+  border-radius: 0.8rem;
+  background-color: #ffffff;
+}
+
+.main__registro--campo input:focus {
+  outline: 1px solid #091e3f;
+}
+
+.main__registro--campo select:disabled {
+  color: #777777;
+  background-color: #ffffff;
+}
+
+/* BOTÓN */
+
+.main__registro--submit {
+  align-self: flex-start;
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  background-color: #091e3f;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.main__registro--submit:hover {
+  color: #091e3f;
+  background-color: #6ac6de;
+}
+
+/* IMAGEN */
+
+.main__registro--img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.main__registro--img img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 1rem;
+  box-shadow: 3px 5px 8px rgba(9, 30, 63, 0.5);
+}
+
+/* TABLET */
+
+@media (min-width: 760px) {
+  .main__registro--contenedor {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .main__registro--formulario {
+    width: 48%;
+  }
+
+  .main__registro--img {
+    width: 45%;
+  }
+}
+
+/* ESCRITORIO */
+
+@media (min-width: 1024px) {
+  .main__registro--contenedor {
+    gap: 3%;
+  }
+
+  .main__registro--formulario {
+    width: 48%;
+    padding: 2rem;
+  }
+
+  .main__registro--campo label {
+    font-size: 2rem;
+  }
+
+  .main__registro--img {
+    width: 45%;
+  }
+}
+
+
+.main__formulario--alerta {
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  animation: aparecerMensaje 0.3s ease-in-out;
+}
+
+.main__formulario--error {
+  color: #b42318;
+  background-color: #fee4e2;
+  border: 1px solid #fecdca;
+}
+
+.main__formulario--exito {
+  color: #067647;
+  background-color: #dcfae6;
+  border: 1px solid #abefc6;
+}
+
+@keyframes aparecerMensaje {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

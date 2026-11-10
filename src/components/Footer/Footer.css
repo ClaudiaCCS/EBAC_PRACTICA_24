@@ -1,0 +1,214 @@
+
+.footer {
+  width: 100%;
+  margin-top: 4rem;
+  color: #fff;
+  background-color: #091e3f;
+}
+
+.footer__principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+  padding: 3rem 4%;
+}
+
+.footer__marca {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.footer__logo {
+  width: 22rem;
+  height: auto;
+  object-fit: contain;
+}
+
+.footer__redes {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 27rem;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+
+.footer__redes img {
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.footer__redes img:hover {
+  transform: scale(1.15);
+}
+
+.footer__navegacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer__navegacion h2 {
+  padding: 0 0 0.5rem;
+  color: #6ac6de;
+  font-size: 2.4rem;
+}
+
+.footer__navegacion a,
+.footer__contacto a {
+  color: #fff;
+  font-size: 1.7rem;
+  transition: color 0.2s ease;
+}
+
+.footer__navegacion a:hover,
+.footer__contacto a:hover {
+  color: #6ac6de;
+}
+
+.footer__contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.footer__contacto h3 {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.footer__whatsapp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5.5rem;
+  height: 5.5rem;
+}
+
+.footer__whatsapp img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.footer__whatsapp img:hover {
+  transform: scale(1.1);
+}
+
+.footer__contacto p,
+.footer__contacto a {
+  font-size: 1.5rem;
+}
+
+.footer__telefonos {
+  margin-top: 1.5rem;
+}
+
+.footer__telefonos p {
+  margin-top: 0.3rem;
+}
+
+.footer__inferior {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.7rem 2rem;
+  color: #091e3f;
+  background-color: #6ac6de;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.footer__inferior a {
+  color: #091e3f;
+}
+
+.footer__inferior a:hover {
+  text-decoration: underline;
+}
+
+/* Tablet */
+@media (min-width: 760px) {
+  .footer__principal {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+    min-height: 30rem;
+  }
+
+  .footer__marca {
+    align-items: flex-start;
+  }
+
+  .footer__redes {
+    max-width: 25rem;
+  }
+
+  .footer__navegacion {
+    align-items: flex-start;
+  }
+
+  .footer__contacto {
+    justify-self: center;
+  }
+
+  .footer__inferior {
+    flex-direction: row;
+    font-size: 1.5rem;
+  }
+}
+
+/* Escritorio */
+@media (min-width: 1024px) {
+  .footer__principal {
+    min-height: 35rem;
+    padding: 3rem 3%;
+  }
+
+  .footer__logo {
+    width: 27rem;
+  }
+
+  .footer__navegacion h2 {
+    font-size: 2.8rem;
+  }
+
+  .footer__navegacion a {
+    font-size: 1.8rem;
+  }
+
+  .footer__contacto h3 {
+    font-size: 2rem;
+  }
+
+  .footer__contacto p,
+  .footer__contacto a {
+    font-size: 1.7rem;
+  }
+
+  .footer__redes {
+    max-width: 27rem;
+    justify-content: space-between;
+  }
+
+  .footer__redes img {
+    width: 3.8rem;
+    height: 3.8rem;
+  }
+}

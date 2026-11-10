@@ -1,0 +1,11 @@
+
+/* ESTILOS PRINCIPALES DE LA APLICACIÓN */
+
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+}
