@@ -1,0 +1,55 @@
+
+/* ESTILOS GLOBALES DE HOUND EXPRESS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  background-color: #fefefe;
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+main {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #091e3f;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 1.3rem;
+}

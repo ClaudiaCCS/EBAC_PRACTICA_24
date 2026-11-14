@@ -1,0 +1,174 @@
+
+.main__buscar {
+  width: 95%;
+  margin: 3rem auto;
+  padding: 2rem 3rem 3rem;
+  border: 2px solid #6ac6de;
+  border-radius: 1rem;
+  background-color: #fff;
+}
+
+.main__buscar h2 {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  font-size: 2.6rem;
+}
+
+.main__buscar--formulario {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 1rem auto 3rem;
+}
+
+.main__buscar--formulario label {
+  font-size: 1.8rem;
+}
+
+.main__buscar--formulario input {
+  width: 21rem;
+  min-height: 3.8rem;
+  padding: 0.8rem;
+  border: 1px solid #091e3f;
+  border-radius: 0.8rem;
+  font-size: 1.3rem;
+}
+
+.main__buscar--formulario input:focus {
+  outline: 1px solid #6ac6de;
+}
+
+.main__buscar--boton {
+  padding: 0.8rem 1.5rem;
+  color: #091e3f;
+  background-color: #6ac6de;
+  border: none;
+  border-radius: 0.8rem;
+  box-shadow: 0.2rem 0.3rem 0.5rem rgba(9, 30, 63, 0.5);
+  font-size: 1.8rem;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.main__buscar--boton:hover {
+  color: #fff;
+  background-color: #091e3f;
+}
+
+.main__buscar--tabla {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.main__buscar table {
+  width: 100%;
+  min-width: 55rem;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.main__buscar thead {
+  color: #fff;
+  background-color: #091e3f;
+}
+
+.main__buscar th {
+  padding: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.main__buscar td {
+  padding: 1.2rem 0.5rem;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #091e3f;
+}
+
+.main__buscar--mensaje {
+  padding: 2rem 0 0.5rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .main__buscar {
+    padding: 1.5rem;
+  }
+
+  .main__buscar--formulario {
+    flex-direction: column;
+  }
+
+  .main__buscar--formulario input {
+    width: 100%;
+  }
+}
+
+
+
+/* =====================================
+   RESULTADOS DEL HISTORIAL
+===================================== */
+
+/* Colores de los estados */
+
+.main__buscar td.modal__status--cancelado {
+  color: #d64541;
+  font-weight: 700;
+}
+
+.main__buscar td.modal__status--pendiente {
+  color: #d68a00;
+  font-weight: 700;
+}
+
+.main__buscar td.modal__status--transito {
+  color: #0b83c9;
+  font-weight: 700;
+}
+
+.main__buscar td.modal__status--entregado {
+  color: #219653;
+  font-weight: 700;
+}
+
+/* Filas alternadas */
+
+.main__buscar tbody tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+/* Efecto al pasar el cursor */
+
+.main__buscar tbody tr:hover {
+  background-color: rgba(106, 198, 222, 0.12);
+}
+
+/* Mensajes de búsqueda */
+
+.main__buscar--mensaje {
+  color: #64748b;
+  font-weight: 600;
+}
+
+/* Campo de búsqueda */
+
+.main__buscar--formulario input:focus {
+  outline: none;
+  border-color: #6ac6de;
+  box-shadow: 0 0 0 3px rgba(106, 198, 222, 0.2);
+}
+
+/* Diseño responsivo */
+
+@media (max-width: 600px) {
+  .main__buscar--tabla {
+    overflow-x: auto;
+  }
+
+  .main__buscar table {
+    min-width: 55rem;
+  }
+}

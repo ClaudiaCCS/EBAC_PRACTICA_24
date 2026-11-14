@@ -1,0 +1,241 @@
+
+/* SECCIÓN ESTADO GENERAL */
+
+.main__estado {
+  width: 100%;
+}
+
+.main__estado--general {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  width: 95%;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #6ac6de;
+}
+
+/* GRÁFICA */
+
+.main__estado--grafica {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.main__estado--lagrafica {
+  width: 100%;
+  max-width: 38rem;
+}
+
+.main__estado--pastel {
+  width: min(85%, 34rem);
+  aspect-ratio: 1;
+  margin: 0 auto;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  background: conic-gradient(
+    #fc9a07 0% 20%,
+    #0b83c9 20% 80%,
+    #22a06b 80% 100%
+  );
+}
+
+.main__estado--leyenda {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.main__estado--leyenda span {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.main__estado--leyenda i {
+  display: inline-block;
+  width: 2rem;
+  height: 1rem;
+  border: 1px solid #ffffff;
+}
+
+.main__estado--leyenda .canceladas {
+  background-color: #e05252;
+}
+
+.main__estado--leyenda .pendientes {
+  background-color: #fc9a07;
+}
+
+.main__estado--leyenda .transito {
+  background-color: #0b83c9;
+}
+
+.main__estado--leyenda .entregadas {
+  background-color: #22a06b;
+}
+
+/* TARJETAS */
+
+.main__estado--tguias {
+  width: 100%;
+}
+
+.main__estado--todasguias {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.main__estado--guias {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.main__estado--contenedor {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  min-height: 10rem;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 0.8rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(9, 30, 63, 0.18);
+}
+
+.main__estado--img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 5rem;
+}
+
+.main__estado--img img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.main__estado--texto {
+  flex: 1;
+  min-width: 0;
+}
+
+.main__estado--titulo {
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  font-weight: 700;
+  color: #000000;
+}
+
+.main__estado--conttexto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.main__estado--numero {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+.main__estado--porcentaje {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+/* COLORES POR ESTADO */
+
+.main__estado--numero.pendientes,
+.main__estado--porcentaje.pendientes {
+  color: #fc9a07;
+}
+
+.main__estado--numero.transito,
+.main__estado--porcentaje.transito {
+  color: #0b83c9;
+}
+
+.main__estado--numero.entregadas,
+.main__estado--porcentaje.entregadas {
+  color: #22a06b;
+}
+
+.main__estado--numero.canceladas,
+.main__estado--porcentaje.canceladas {
+  color: #e05252;
+}
+
+/* TOTAL DE GUÍAS */
+
+.main__estado--totales .main__estado--contenedor {
+  min-height: 9rem;
+}
+
+.main__estado--totales .main__estado--texto {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* TABLET */
+
+@media (min-width: 760px) {
+  .main__estado--general {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 3%;
+    padding: 2.5rem;
+  }
+
+  .main__estado--grafica {
+    width: 43%;
+  }
+
+  .main__estado--tguias {
+    width: 54%;
+  }
+
+  .main__estado--guias {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ESCRITORIO */
+
+@media (min-width: 1024px) {
+  .main__estado--general {
+    min-height: 46rem;
+  }
+
+  .main__estado--grafica {
+    width: 45%;
+  }
+
+  .main__estado--tguias {
+    width: 53%;
+  }
+
+  .main__estado--img {
+    width: 5.5rem;
+  }
+
+  .main__estado--contenedor {
+    min-height: 11rem;
+  }
+
+  .main__estado--totales .main__estado--contenedor {
+    min-height: 9rem;
+  }
+}
